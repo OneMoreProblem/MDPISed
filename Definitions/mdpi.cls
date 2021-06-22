@@ -59,7 +59,8 @@
 \RequirePackage{tabularx}
 \RequirePackage{pbox} % For biography environment
 \RequirePackage{ragged2e} % For command \justifying
-
+\usetikzlibrary{patterns}
+%\usepackage[russian]{babel} % For Russian
 %% OPTIONS
 % For transition period to change back to continuous page numbers
 \def\@continuouspages{}

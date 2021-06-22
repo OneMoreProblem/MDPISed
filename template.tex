@@ -2,7 +2,7 @@
 %  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
 
 %=================================================================
-\documentclass[journal,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+\documentclass[fluids,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
 
 % For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
 
@@ -189,10 +189,60 @@ The text continues here.
 
 All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
 
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[scale=1, z={(-.707,-.5)}]
+    \draw (3.6,0,0) -- (0,0,0) -- (0,4,0)--(6,4,0)--(3.6,0,0);
+    %\draw (3.6,0,0) -- (3.6,0,-1) -- (6,4,-1) -- (6,4,0) -- cycle;
+    %\draw (6,4,0) -- (0,4,0) -- (0,4,-1) -- (6,4,-1);
+    \draw (-0.5,2,0) node{};
+    \draw (4.1,-.2,-1.5) node{};
+    \draw (3.5,5,0) node{};
+    \draw[<->] (-0.1,0) --node[above,rotate=90] {$H$} (-0.1,4);
+    \draw[<->] (0,4.1,0) --node[above,] {$L_1$} (6,4.1,0);
+    \draw[<->] (0,-0.1,0) --node[below,] {$L_2$} (3.6,-0.1,0);
+    \draw [black, thick] (5.5,4) arc [start angle=180, end angle=240, radius=0.5cm]
+        node [left] {$\alpha$};
+    \draw[thick,->] (5.5,1,0) -- (6.5,1,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (5.5,1,0) -- (5.5,2,0) node[anchor=north west]{$z$};
+    \draw[thick,->] (0,0,0) -- (2.5,1.6,0) ;
+    \draw[thick,dotted] (0,2,0)--(4.8,2,0);
+    \draw [black, thick] (0.42,0.31) arc [start angle=30, end angle=90, radius=0.5cm] node [above right] {$\theta$};
+    
+    \end{tikzpicture}
+    \caption{asdfasfd $\theta = sin \frac{\omega}{N}$}
+    \label{fig:domainup}
+\end{figure}
+
 \begin{figure}[H]
 \includegraphics[width=10.5 cm]{Definitions/logo-mdpi}
 \caption{This is a figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig1}}
 \end{figure}   
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[scale=1, z={(-.707,-.5)}]
+    \draw[pattern=dots] (3.6,0,0) -- (0,0,0) -- (0,4,0)--(6,4,0)--(3.6,0,0);
+    %\draw (3.6,0,0) -- (3.6,0,-1) -- (6,4,-1) -- (6,4,0) -- cycle;
+    %\draw (6,4,0) -- (0,4,0) -- (0,4,-1) -- (6,4,-1);
+    \draw (-0.5,2,0) node{};
+    \draw (4.1,-.2,-1.5) node{};
+    \draw (3.5,5,0) node{};
+    \draw[<->] (-0.1,0) --node[above,rotate=90] {$H$} (-0.1,4);
+    \draw[<->] (0,4.1,0) --node[above,] {$L_1$} (6,4.1,0);
+    \draw[<->] (0,-0.1,0) --node[below,] {$L_2$} (3.6,-0.1,0);
+    \draw [black, thick] (5.5,4) arc [start angle=180, end angle=240, radius=0.5cm]
+        node [left] {$\alpha$};
+    \draw[thick,->] (5.5,1,0) -- (6.5,1,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (5.5,1,0) -- (5.5,2,0) node[anchor=north west]{$z$};
+    \draw[thick,->] (0,0,0) -- (2.5,1.6,0) ;
+
+    \draw [black, thick] (0.42,0.31) arc [start angle=30, end angle=90, radius=0.5cm] node [above right] {$\theta$};
+    
+    \end{tikzpicture}
+    \caption{asdfasfd $\theta = sin \frac{\omega}{N}$}
+    \label{fig:domainup}
+\end{figure}
 
 % The MDPI table float is called specialtable
 \begin{specialtable}[H] 
